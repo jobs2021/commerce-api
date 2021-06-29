@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "airbnb-base",
+    "standard",
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "jest": true,
+    "jasmine": true
+  },
+  "rules": {
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "space-before-function-paren": "error",
+    "import/no-unresolved": "off",
+    "no-underscore-dangle":"off",
+    "no-console": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^inject|TYPES" }],
+    "class-methods-use-this": "off"
+  }
+}

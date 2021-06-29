@@ -1,0 +1,29 @@
+{
+	"RESPONSE_BAD_REQUEST": "Bad request",
+	"RESPONSE_UNATHORIZED": "Your request was made with invalid credentials",
+	"RESPONSE_INTERNAL_ERROR": "was an internal server error occurred",
+	"RESPONSE_NO_CONTENT": "Record deleted",
+	
+	"ERROR_UNKNOWN": "unknown error ocurred",
+	
+	"AUTH_ERROR_CREATE_USER": "Unkown error on create new user",
+	
+	"VALIDATION_IS_EMPTY": "{{field}} is empty'",
+	"VALIDATION_MUST_BE": "{{field}} must be: {{value}}",
+	"VALIDATION_MUST_BE_NUMERIC": "{{field}} must be only numbers",
+	"VALIDATION_MUST_BE_DIGITS": "{{field}} must be {{value}} digits",
+	"VALIDATION_MUST_BE_UPPERCASE": "{{field}} must be uppercase",
+	
+	"VALIDATION_MUST_BE_VALID_DATE_FORMAT": "{{field}} must be a valid date format {{format}}",
+	"VALIDATION_MUST_BE_VALID_FORMAT": "{{field}} must be a valid format",
+	"VALIDATION_MUST_BE_VALID_PHONE": "{{field}} must be a valid phone number",
+	"VALIDATION_MUST_BE_VALID_LANG_CODE": "{{field}} must be a valid lang code",
+	"VALIDATION_MUST_BE_VALID_COUNTRY_CODE": "{{field}} must be a valid country code",
+	"VALIDATION_IS_INVALID_OR_EXPIRED": "{{field}} is invalid or expired",
+
+	"VALIDATION_ALREADY_EXISTS": "{{field}} already exists",
+	"VALIDATION_IS_NOT_EXISTS": "{{field}} is not exists",
+	"VALIDATION_IS_NOT_YOURS": "{{field}} is not yours",
+	"VALIDATION_IS_NOT_VALID_VALUE": "{{field}} is not a valid value"
+
+}

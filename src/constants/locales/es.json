@@ -1,0 +1,29 @@
+{
+	"RESPONSE_BAD_REQUEST": "Mala peticion",
+	"RESPONSE_UNATHORIZED": "Tus credenciales son invalidas, intente nuevamente",
+	"RESPONSE_INTERNAL_ERROR": "Opps! ocurrio un error interno",
+	"RESPONSE_NO_CONTENT": "Registro eliminado",
+	
+	"ERROR_UNKNOWN": "Ocurrio un error desconocido",
+	
+	"AUTH_ERROR_CREATE_USER": "Error desconocido al crear nuevo usuario",
+	
+	"VALIDATION_IS_EMPTY": "{{field}} esta vacio'",
+	"VALIDATION_MUST_BE": "{{field}} debe ser: {{value}}",
+	"VALIDATION_MUST_BE_NUMERIC": "{{field}} debe contener solo numeros",
+	"VALIDATION_MUST_BE_DIGITS": "{{field}} debe ser de {{value}} digitos",
+	"VALIDATION_MUST_BE_UPPERCASE": "{{field}} debe estar en mayusculas",
+	
+	"VALIDATION_MUST_BE_VALID_DATE_FORMAT": "{{field}} debe tener un formato de fecha valido: {{format}}",
+	"VALIDATION_MUST_BE_VALID_FORMAT": "{{field}} debe contener un formato valido",
+	"VALIDATION_MUST_BE_VALID_PHONE": "{{field}} debe ser un numero de telefono valido",
+	"VALIDATION_MUST_BE_VALID_LANG_CODE": "{{field}} debe ser un codigo de lenguaje valido",
+	"VALIDATION_MUST_BE_VALID_COUNTRY_CODE": "{{field}} debe ser un codigo de pais valido",
+	"VALIDATION_IS_INVALID_OR_EXPIRED": "{{field}} es invalido o ya expiro",
+
+	"VALIDATION_ALREADY_EXISTS": "{{field}} ya existe",
+	"VALIDATION_IS_NOT_EXISTS": "{{field}} no existe",
+	"VALIDATION_IS_NOT_YOURS": "{{field}} no es tuyo",
+	"VALIDATION_IS_NOT_VALID_VALUE": "{{field}} no es un valor valido"
+
+}

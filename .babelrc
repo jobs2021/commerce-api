@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["@babel/preset-env"]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/proposal-optional-chaining",
+    "@babel/proposal-nullish-coalescing-operator",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties",  { "loose": true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }],
+    "babel-plugin-parameter-decorator",
+    ["module-resolver", { "root": ["."] }]
+  ]
+}
