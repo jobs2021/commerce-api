@@ -6,6 +6,9 @@
 	"RESPONSE_SYNTAX_ERROR": "Opps! error de sintaxis detectado",
 	
 	"ERROR_UNKNOWN": "Ocurrio un error desconocido",
+
+	"JWT_ERROR_ENCODE": "Oops! al generar credenciales",
+	"JWT_ERROR_DECODE": "Oops! error al decodificar las credenciales",
 	
 	"AUTH_ERROR_CREATE_USER": "Error desconocido al crear nuevo usuario",
 	"AUTH_USER_NOT_FOUND": "Usuario no encontrado",

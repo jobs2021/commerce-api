@@ -8,6 +8,5 @@ export default (lang, label, props) => {
   // eslint-disable-next-line no-underscore-dangle
   const text = i18n.__(label, props)
 
-  // return
   return text
 }

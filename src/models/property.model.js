@@ -5,13 +5,13 @@ const modelName = 'properties'
 
 const schema = new Schema({
   name: {
-    type: String, default: ''
+    type: String
   },
   long_description: {
-    type: String, default: ''
+    type: String
   },
   image: {
-    type: String, default: ''
+    type: String
   },
   extra_images: [{
     type: String, default: [], maxItems: 5
@@ -24,18 +24,18 @@ const schema = new Schema({
   },
   amenities: [{
     name: {
-      type: String, default: ''
+      type: String
     },
     value: {
-      type: String, default: ''
+      type: String
     },
   }],
   location: {
     latitude: {
-      type: String, default: ''
+      type: String
     },
     longitude: {
-      type: String, default: ''
+      type: String
     },
   },
   created_by: {

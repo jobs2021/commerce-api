@@ -4,16 +4,16 @@ const modelName = 'users'
 
 const schema = new Schema({
   first_name: {
-    type: String, default: ''
+    type: String
   },
   last_name: {
-    type: String, default: ''
+    type: String
   },
   email: {
-    type: String, default: '', unique: true
+    type: String, unique: true
   },
   password: {
-    type: String, default: ''
+    type: String
   },
   created_at: {
     type: Date, default: Date.now

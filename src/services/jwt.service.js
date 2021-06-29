@@ -2,6 +2,7 @@
 import { injectable, inject } from 'inversify'
 import ErrorCodes from 'src/constants/errorCodes'
 import TYPES from 'src/constants/di'
+import LABELS from 'src/constants/labels'
 
 @injectable()
 class JWTService {
@@ -35,7 +36,7 @@ class JWTService {
     } catch (err) {
       if (err instanceof this.APIError) throw err
       console.log(err)
-      throw new this.APIError(ErrorCodes.INTERNAL_SERVER, `Oops! al generar credenciales`)
+      throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.JWT_ERROR_ENCODE)
     }
   }
 
@@ -46,7 +47,7 @@ class JWTService {
     } catch (err) {
       if (err instanceof this.APIError) throw err
       console.log(err)
-      throw new this.APIError(ErrorCodes.INTERNAL_SERVER, `Oops! error al decodificar las credenciales`)
+      throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.JWT_ERROR_DECODE)
     }
   }
 

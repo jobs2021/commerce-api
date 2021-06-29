@@ -25,9 +25,7 @@ class PropertyService {
         status: 'active'},
         options
       )
-      // contributions.docs = contributions.docs.map((x) => {
-      //   return { ...x.toObject(), created_by: this.UserService.smallView(x.created_by) }
-      // })
+
       return this.Paginate(properties)
     } catch (err) {
       if (err instanceof this.APIError) throw err
