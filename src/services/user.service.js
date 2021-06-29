@@ -24,7 +24,6 @@ class UserService {
       return user
     } catch (err) {
       if (err instanceof this.APIError) throw err
-      console.log(err)
       throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.AUTH_ERROR_RETRIVE_USER)
     }
   }
@@ -36,7 +35,6 @@ class UserService {
       return user
     } catch (err) {
       if (err instanceof this.APIError) throw err
-      console.log(err)
       throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.AUTH_ERROR_RETRIVE_USER)
     }
   }
@@ -47,27 +45,11 @@ class UserService {
       return user
     } catch (err) {
       if (err instanceof this.APIError) throw err
-      console.log(err)
       if (err.code === 11000) throw new this.APIError(
         ErrorCodes.DATA_VALIDATION_FAILED,
         LABELS.AUTH_ERROR_USER_ALREADY_REGISTERED
       )
       throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.AUTH_ERROR_SINGUP)
-    }
-  }
-
-  async updateById (id, payload) {
-    try {
-      const user = await this.UserModel.findOne({_id: id})
-      if (!user) throw new this.APIError(ErrorCodes.NOT_FOUND, LABELS.AUTH_USER_NOT_FOUND)
-      
-      Object.assign(user, payload)
-      await user.save()
-      return user
-    } catch (err) {
-      if (err instanceof this.APIError) throw err
-      console.log(err)
-      throw new this.APIError(ErrorCodes.INTERNAL_SERVER, LABELS.AUTH_ERROR_RETRIVE_USER)
     }
   }
 

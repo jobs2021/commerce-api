@@ -13,6 +13,13 @@
 	"AUTH_ERROR_SINGUP": "Oops! ocurrio un error al registrarse",
 	"AUTH_ERROR_USER_ALREADY_REGISTERED": "El usuario ya se encuentra registrado",
 	"AUTH_ERROR_INVALID_CREDENTIALS": "Oops! credenciales invalidas",
+
+	"PROPERTY_ERROR_CREATE": "Oops! ocurrio un error al crear la propiedad",
+	"PROPERTY_ERROR_UPDATE": "Oops! ocurrio un error al actualizar la propiedad",
+	"PROPERTY_ERROR_DELETE": "Oops! ocurrio un error al eliminar la propiedad",
+	"PROPERTY_ERROR_LIST": "Oops! ocurrio un error al listar tus propiedades",
+	"PROPERTY_NOT_FOUND": "Parece que no hemos encontrado esa propiedad",
+	"PROPERTY_NO_ACCESS": "Parece que no tienes accesso a esta propiedad",
 	
 	"VALIDATION_IS_EMPTY": "{{field}} esta vacio'",
 	"VALIDATION_MUST_BE": "{{field}} debe ser: {{value}}",

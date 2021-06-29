@@ -28,6 +28,7 @@ container.bind(TYPES.CRYPT_SERVICE).to(Services.CryptService)
 container.bind(TYPES.JWT_SERVICE).to(Services.JWTService)
 container.bind(TYPES.AUTH_SERVICE).to(Services.AuthService)
 container.bind(TYPES.USER_SERVICE).to(Services.UserService)
+container.bind(TYPES.PROPERTY_SERVICE).to(Services.PropertyService)
 
 
 export default container
