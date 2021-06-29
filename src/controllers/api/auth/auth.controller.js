@@ -8,7 +8,7 @@ const login = async (req, res, next) => {
     const { email, password } = req.body
 
     const token = await authService.login(email, password)
-    return success(res, {token})
+    return success(res, { token })
   } catch (err) {
     console.error(err)
     return next(err)

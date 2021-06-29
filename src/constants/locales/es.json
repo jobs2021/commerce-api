@@ -20,6 +20,8 @@
 	"PROPERTY_ERROR_LIST": "Oops! ocurrio un error al listar tus propiedades",
 	"PROPERTY_NOT_FOUND": "Parece que no hemos encontrado esa propiedad",
 	"PROPERTY_NO_ACCESS": "Parece que no tienes accesso a esta propiedad",
+
+	"EMAIL_ERROR_SEND": "Ocurrio un error al enviar el email",
 	
 	"VALIDATION_IS_EMPTY": "{{field}} esta vacio'",
 	"VALIDATION_MUST_BE": "{{field}} debe ser: {{value}}",

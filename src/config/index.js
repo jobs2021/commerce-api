@@ -15,6 +15,9 @@ module.exports = {
 
   xAccessToken: process.env.APP_X_ACCESS_TOKEN,
 
+  // email service
+  emailEnpoint: process.env.APP_EMAIL_SERVICE_URL,
+
   // Languages (ISO)
   languages: {
     list: ['en', 'es'],

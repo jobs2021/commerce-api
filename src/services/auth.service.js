@@ -3,6 +3,7 @@ import { injectable, inject } from 'inversify'
 import ErrorCodes from 'src/constants/errorCodes'
 import TYPES from 'src/constants/di'
 import LABELS from 'src/constants/labels'
+import EVENTS from 'src/constants/events'
 
 @injectable()
 class AuthService {
@@ -12,13 +13,15 @@ class AuthService {
     @inject(TYPES.USER_SERVICE) UserService,
     @inject(TYPES.MONGO_MODELS) { User },
     @inject(TYPES.JWT_SERVICE) JWTService,
-    @inject(TYPES.CRYPT_SERVICE) CryptService
+    @inject(TYPES.CRYPT_SERVICE) CryptService,
+    @inject(TYPES.EVENT_EMITER) EventEmiter
   ) {
     this.UserModel = User(MongoConnection)
     this.APIError = APIError
     this.UserService = UserService
     this.JWTService = JWTService
     this.CryptService = CryptService
+    this.EventEmiter = EventEmiter
   }
 
   async login (email, password) {
@@ -48,6 +51,10 @@ class AuthService {
       const token = await this.JWTService.encode(user)
       const result = { ...user.toObject(), token }
       delete result.password
+      
+      // send email
+      this.EventEmiter.emit(EVENTS.USER_SIGNUP, user)
+
       return result
     } catch (err) {
       if (err instanceof this.APIError) throw err
