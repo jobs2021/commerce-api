@@ -5,7 +5,6 @@ import EVENTS from 'src/constants/events'
 const userEvents = (eventEmiter) => {
     eventEmiter.on(EVENTS.USER_SIGNUP, async (user = {}) => {
         try {
-            console.log('ENTRO', user)
             const emailService = Container.get(TYPES.EMAIL_SERVICE)
     
             const payload = {
