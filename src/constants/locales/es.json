@@ -3,10 +3,16 @@
 	"RESPONSE_UNATHORIZED": "Tus credenciales son invalidas, intente nuevamente",
 	"RESPONSE_INTERNAL_ERROR": "Opps! ocurrio un error interno",
 	"RESPONSE_NO_CONTENT": "Registro eliminado",
+	"RESPONSE_SYNTAX_ERROR": "Opps! error de sintaxis detectado",
 	
 	"ERROR_UNKNOWN": "Ocurrio un error desconocido",
 	
 	"AUTH_ERROR_CREATE_USER": "Error desconocido al crear nuevo usuario",
+	"AUTH_USER_NOT_FOUND": "Usuario no encontrado",
+	"AUTH_ERROR_RETRIVE_USER": "Error al obtener usuario",
+	"AUTH_ERROR_SINGUP": "Oops! ocurrio un error al registrarse",
+	"AUTH_ERROR_USER_ALREADY_REGISTERED": "El usuario ya se encuentra registrado",
+	"AUTH_ERROR_INVALID_CREDENTIALS": "Oops! credenciales invalidas",
 	
 	"VALIDATION_IS_EMPTY": "{{field}} esta vacio'",
 	"VALIDATION_MUST_BE": "{{field}} debe ser: {{value}}",
@@ -14,6 +20,7 @@
 	"VALIDATION_MUST_BE_DIGITS": "{{field}} debe ser de {{value}} digitos",
 	"VALIDATION_MUST_BE_UPPERCASE": "{{field}} debe estar en mayusculas",
 	
+	"VALIDATION_MUST_BE_EMAIL": "ingrese un email valido",
 	"VALIDATION_MUST_BE_VALID_DATE_FORMAT": "{{field}} debe tener un formato de fecha valido: {{format}}",
 	"VALIDATION_MUST_BE_VALID_FORMAT": "{{field}} debe contener un formato valido",
 	"VALIDATION_MUST_BE_VALID_PHONE": "{{field}} debe ser un numero de telefono valido",
@@ -24,6 +31,8 @@
 	"VALIDATION_ALREADY_EXISTS": "{{field}} ya existe",
 	"VALIDATION_IS_NOT_EXISTS": "{{field}} no existe",
 	"VALIDATION_IS_NOT_YOURS": "{{field}} no es tuyo",
-	"VALIDATION_IS_NOT_VALID_VALUE": "{{field}} no es un valor valido"
+	"VALIDATION_IS_NOT_VALID_VALUE": "{{field}} no es un valor valido",
+
+	"VALIDATION_PASSWORD_NO_MATCH": "las constraseñas no coinciden"
 
 }

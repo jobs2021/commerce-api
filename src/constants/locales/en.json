@@ -8,7 +8,7 @@
 	
 	"AUTH_ERROR_CREATE_USER": "Unkown error on create new user",
 	
-	"VALIDATION_IS_EMPTY": "{{field}} is empty'",
+	"VALIDATION_IS_EMPTY": "{{field}} is empty",
 	"VALIDATION_MUST_BE": "{{field}} must be: {{value}}",
 	"VALIDATION_MUST_BE_NUMERIC": "{{field}} must be only numbers",
 	"VALIDATION_MUST_BE_DIGITS": "{{field}} must be {{value}} digits",

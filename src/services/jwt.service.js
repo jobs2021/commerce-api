@@ -4,7 +4,7 @@ import ErrorCodes from 'src/constants/errorCodes'
 import TYPES from 'src/constants/di'
 
 @injectable()
-class JWTServiceV1 {
+class JWTService {
   constructor (
     @inject(TYPES.API_ERROR) APIError,
     @inject(TYPES.JWT) jwt,
@@ -22,11 +22,9 @@ class JWTServiceV1 {
       const { iss, aud, secretKey } =  this.JWTConfigs
       const payload = {
         user_id: user._id,
-        user_name: user.user_name,
         first_name: user.name,
         last_name: user.last_name,
-        image: user.image,
-        role: user.role,
+        email: user.email,
         iss,
         aud,
         iat: this.Moment().unix(),
@@ -54,4 +52,4 @@ class JWTServiceV1 {
 
 }
 
-export default JWTServiceV1
+export default JWTService

@@ -6,6 +6,7 @@ import routes from 'src/controllers'
 import lang from 'src/middlewares/lang'
 import error from 'src/middlewares/error'
 import notFound from 'src/middlewares/notFound'
+import bodyParser from 'body-parser'
 
 export default (port, ip) => {
   // define express app
@@ -16,6 +17,7 @@ export default (port, ip) => {
   app.use(cors({ methods: 'GET,PUT,POST,DELETE' }))
   app.use(mquery())
   app.use(lang)
+  app.use(bodyParser.json())
 
   // app settings
   app.disable('etag')

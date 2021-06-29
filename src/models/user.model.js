@@ -10,7 +10,7 @@ const schema = new Schema({
     type: String, default: ''
   },
   email: {
-    type: String, default: ''
+    type: String, default: '', unique: true
   },
   password: {
     type: String, default: ''
