@@ -13,6 +13,9 @@ const schema = new Schema({
   image: {
     type: String, default: ''
   },
+  extra_images: [{
+    type: String, default: [], maxItems: 5
+  }],
   currency: {
     type: String, enum: ['usd', 'eur', 'cad'], default: 'usd'
   },

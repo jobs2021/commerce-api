@@ -23,6 +23,7 @@
 	
 	"VALIDATION_IS_EMPTY": "{{field}} esta vacio'",
 	"VALIDATION_MUST_BE": "{{field}} debe ser: {{value}}",
+	"VALIDATION_MUST_BE_MAX": "{{field}} debe contener maximo {{value}} imagenes",
 	"VALIDATION_MUST_BE_NUMERIC": "{{field}} debe contener solo numeros",
 	"VALIDATION_MUST_BE_DIGITS": "{{field}} debe ser de {{value}} digitos",
 	"VALIDATION_MUST_BE_UPPERCASE": "{{field}} debe estar en mayusculas",

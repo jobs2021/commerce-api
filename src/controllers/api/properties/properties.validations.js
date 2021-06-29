@@ -36,6 +36,13 @@ const create = [
       intl(req.lang, LABELS.VALIDATION_IS_EMPTY, {field: path})
     ),
 
+  check('extra_images')
+    .optional()
+    .isArray({min: 0, max: 5})
+    .withMessage((x, {req, path}) => 
+      intl(req.lang, LABELS.VALIDATION_MUST_BE_MAX, {field: path, value: 5})
+    ),
+
   check('currency')
     .notEmpty()
     .withMessage((x, {req, path}) => 
@@ -92,6 +99,9 @@ const updateById = [
       .optional(),
   
     check('image')
+      .optional(),
+    
+    check('extra_images')
       .optional(),
   
     check('currency')
