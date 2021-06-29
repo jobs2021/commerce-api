@@ -41,7 +41,7 @@ class JWTService {
 
   async decode (token) {
     try {
-      const result = this.JWT.decode(token, this.JWTConfigs.secretKey, true)
+      const result = this.JWT.decode(token, this.JWTConfigs.secretKey)
       return result
     } catch (err) {
       if (err instanceof this.APIError) throw err
