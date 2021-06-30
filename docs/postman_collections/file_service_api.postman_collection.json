@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "01543fb2-b78f-4784-b8c7-39939693021a",
+		"name": "File Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "upload file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/ijobs2021/Downloads/sell-sign-1872898-1590324.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST_FILE_API}}/api/files",
+							"host": [
+								"{{HOST_FILE_API}}"
+							],
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "c73e0f1c-297f-4cc5-9b2b-ae4f53b6f5f2",
+		"name": "Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"doe@email.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/auth/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"email\": \"doe@gmail.com\",\n    \"password\": \"12345\",\n    \"confirm_password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/auth/signup",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "properties",
+			"item": [
+				{
+					"name": "list my properties",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/properties?page=1&limit=5&filter[currency]=usd",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "filter[currency]",
+									"value": "usd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"My property\",\n    \"long_description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n    \"image\": \"https://bit.ly/3y3qwNj\",\n    \"extra_images\": [\n        \"https://bit.ly/3y3qwNj\",\n        \"https://bit.ly/3y3qwNj\",\n        \"https://bit.ly/3y3qwNj\",\n        \"https://bit.ly/3y3qwNj\",\n        \"https://bit.ly/3y3qwNj\"\n    ],\n    \"currency\": \"usd\",\n    \"price\": \"10000.99\",\n    \"amenities\": [\n        {\n            \"name\": \"baños\",\n            \"value\": \"2\"\n        },\n        {\n            \"name\": \"parqueos\",\n            \"value\": \"4\"\n        },\n        {\n            \"name\": \"piscina\",\n            \"value\": \"si\"\n        },\n        {\n            \"name\": \"seguridad privada\",\n            \"value\": \"no\"\n        }\n    ],\n    \"location\": {\n        \"latitude\": \"-26.095760\",\n        \"longitude\": \"27.756109\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/properties",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/properties/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"properties",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60dac0226632ea346171f620"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"My Property\",\n    \"amenities\": [\n        {\n            \"name\": \"baños\",\n            \"value\": \"2\"\n        },\n        {\n            \"name\": \"piscina\",\n            \"value\": \"si\"\n        },\n        {\n            \"name\": \"seguridad privada\",\n            \"value\": \"no\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/properties/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"properties",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60db212bfbe86d3d4b6c9ceb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/properties/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"properties",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60db212bfbe86d3d4b6c9ceb"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
