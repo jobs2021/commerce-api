@@ -23,7 +23,7 @@ El proyecto se divide en tres repositorios separando logica de negocio y balance
 ## Variables de entorno
 La mayoria de variables de entorno son compartidas entre Microservicios, puede encontrar informacion sobre las requeridas accediendo al README de cada repositorio.
 
-| Nombre | URL | Descripcion |
+| Nombre | Example | Descripcion |
 | --- | --- | --- |
 | PORT | 3001 | Puerto en el que correra la app
 | APP_JWT_SECRET_KEY | AABBCCAABBCC | Llave con la que firmara los JWT |
