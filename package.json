@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "build": "babel src -d lib --copy-files",
     "prod": "NODE_ENV=production node .",
-    "dev": "nodemon --exec babel-node ."
+    "dev": "nodemon --exec babel-node .",
+    "start": "babel-node ."
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
